@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+//h
+h1{
+  margin-left: 2vw;
+}
+
+//Atom
+.Fab{
+  position:absolute; top:70vh; left:80vw;
+  width: 5vw;
+  height: 5vw;
+  font-size: 200%;
+  border-radius: 50%;
+  background: red;
+}
+
+.OutlineButton{
+  border: solid 1px black;
+  color: red;
+  cursor : default;
+}
+
+.CheckNoTodo{
+  width: 2vh;
+  height: 2vh;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+.BackCover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(128,128,128,0.5);
+}
+
+.EnterText{
+  width: 30vw;
+  height: 15vh;
+}
+
+.EnterDate{
+  display: flex;
+}
+
+
+//Molecules
+.MenuBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 7vh;
+  background: gray;
+  .OutlineButton{
+    color: blue;
+    margin-right: 2vw;
+  }
+}
+
+.TwoLowText{
+}
+
+.CardEnterTextAndData{
+  position: absolute;
+  top: 35vh;
+  left: 35vw;
+  width: 30vw;
+  height: 20vh;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0px 2px 3px gray;
+  .EnterText{}
+  &__DateAndButton{
+    display: flex;
+    .EnterDate{
+      margin-left: 2vw
+    }
+    .OutlineButton{}
+  }
+}
+
+.TodoCard{
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0px 2px 3px gray;
+  .CheckNoTodo{
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .TwoLowText{
+    width: 50vw;
+  }
+  .OutlineButton{
+  }
+}
+
+
+
+//Organisms
+.TodoList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  height: 70vh;
+  .TodoCard{
+    margin-top: 3vw;
+    &:first-child{
+      margin-top: 1vw;
+    }
+  }
+}
+
+.AddTodo{
+  .BackCover{}
+  .CardEnterTextAndData{}
+}
+
+
+
+//Templates
+.TopPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .MenuBar{}
+  .TodoList{}
+  .Fab{}
+}
