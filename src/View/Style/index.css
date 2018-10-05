@@ -5,6 +5,9 @@
 h1 {
   margin-left: 2vw; }
 
+textarea {
+  resize: none; }
+
 .Fab {
   position: fixed;
   top: 70vh;

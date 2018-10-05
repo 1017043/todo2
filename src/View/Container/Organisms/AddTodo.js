@@ -9,11 +9,20 @@ import CardEnterTextAndData from '../../Presentational/Molecules/CardEnterTextAn
 class AddTodo extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      textarea:this.props.first_state.text,
-      date: moment(this.props.first_state.deadline).format("YYYY-MM-DD"),
-      time: moment(this.props.first_state.deadline).format("HH:mm"),
-    };
+    if("id" in this.props.first_state){
+      this.state = {
+        textarea:this.props.first_state.text,
+        date: moment(this.props.first_state.deadline).format("YYYY-MM-DD"),
+        time: moment(this.props.first_state.deadline).format("HH:mm"),
+      }
+    }
+    else{
+      this.state = {
+        textarea:"",
+        date: "",
+        time: "",
+      };
+    }
   }
   changeValue(e){
       console.log(e.target.type);
@@ -22,7 +31,7 @@ class AddTodo extends Component {
       });
    }
   render() {
-    console.log("@testAddtodo",this.props.first_state);
+    console.log("@testAddtodo",this.state);
     return (
       <div className="AddTodo">
         <BackCover onClick={this.props.ClickBackCover}/>
@@ -31,7 +40,8 @@ class AddTodo extends Component {
           changeDate={e => this.changeValue(e)}
           changeTime={e => this.changeValue(e)}
           ClickOutlineButton={() => this.props.ClickOutlineButton(Object.assign({},this.state))}
-          first_state={this.props.first_state} />
+          first_state={this.props.first_state}
+          add_state={this.state}/>
       </div>
     );
   }
