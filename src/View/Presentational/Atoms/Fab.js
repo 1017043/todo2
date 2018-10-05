@@ -3,7 +3,11 @@ import '../../Style/index.css';
 
 
 const Fab = (props) =>{
-  return <button className="Fab" onClick={props.onClick}>+</button>
+  return (
+    <div className="Fab" onClick={props.onClick}>
+      <i className="fas fa-plus-circle fa-3x"></i>
+    </div>
+  )
 }
 
 export default Fab;

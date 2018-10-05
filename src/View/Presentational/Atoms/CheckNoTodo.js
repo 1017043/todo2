@@ -1,8 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../Style/index.css';
 
-const CheckNoTodo = (props) =>{
-  return <div className="CheckNoTodo"/>
+const CheckTodo = (props) =>{
+  if(props.check===false){
+    return (
+      <div className="CheckNoTodo">
+        <i className="far fa-circle fa-2x" onClick={props.ClickCheck}></i>
+      </div>
+    )
+  }
+  else{
+    return (
+      <div className="CheckNoTodo">
+        <i className="far fa-check-circle fa-2x" onClick={props.ClickCheck}></i>
+      </div>
+    )
+  }
 }
 
-export default CheckNoTodo;
+export default CheckTodo;

@@ -6,25 +6,16 @@ h1 {
   margin-left: 2vw; }
 
 .Fab {
-  position: absolute;
+  position: fixed;
   top: 70vh;
   left: 80vw;
-  width: 5vw;
-  height: 5vw;
-  font-size: 200%;
-  border-radius: 50%;
-  background: red; }
+  text-shadow: 2px 2px 2px;
+  color: black; }
 
 .OutlineButton {
   border: solid 1px black;
   color: red;
   cursor: default; }
-
-.CheckNoTodo {
-  width: 2vh;
-  height: 2vh;
-  border-radius: 50%;
-  border: solid 1px black; }
 
 .BackCover {
   position: absolute;
@@ -42,14 +33,16 @@ h1 {
   display: flex; }
 
 .MenuBar {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
   height: 7vh;
   background: gray; }
-  .MenuBar .OutlineButton {
-    color: blue;
+  .MenuBar .ButtonOfGear {
     margin-right: 2vw; }
 
 .CardEnterTextAndData {
@@ -62,9 +55,21 @@ h1 {
   border-radius: 2px;
   box-shadow: 0px 2px 3px gray; }
   .CardEnterTextAndData__DateAndButton {
-    display: flex; }
-    .CardEnterTextAndData__DateAndButton .EnterDate {
-      margin-left: 2vw; }
+    display: flex;
+    justify-content: center; }
+
+.CardToSet {
+  position: absolute;
+  top: 35vh;
+  left: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+  height: 12vw;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 3px gray; }
 
 .TodoCard {
   display: flex;
@@ -77,18 +82,22 @@ h1 {
     margin-left: 1vw;
     margin-right: 1vw; }
   .TodoCard .TwoLowText {
-    width: 50vw; }
+    width: 50vw;
+    word-wrap: break-word; }
+  .TodoCard .ButtonOfEdit {
+    margin-right: 1vw; }
+  .TodoCard .ButtonOfDelete {
+    margin-right: 1vw; }
 
 .TodoList {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70vw;
-  height: 70vh; }
+  width: 70vw; }
   .TodoList .TodoCard {
     margin-top: 3vw; }
     .TodoList .TodoCard:first-child {
-      margin-top: 1vw; }
+      margin-top: 10vw; }
 
 .TopPage {
   display: flex;
