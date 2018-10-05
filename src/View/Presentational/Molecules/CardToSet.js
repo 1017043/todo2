@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../Style/index.css';
 
-import EnterDate from '../Atoms/EnterDate.js';
 import SelectBox from '../Atoms/SelectBox.js';
 
 const CardToSet = (props) =>{

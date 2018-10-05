@@ -3,7 +3,6 @@ import '../../Style/index.css';
 
 import CheckTodo from '../Atoms/CheckNoTodo.js';
 import TwoLowText from '../Atoms/TwoLowText.js';
-import OutlineButton from '../Atoms/OutlineButton.js';
 import ButtonOfEdit from '../Atoms/ButtonOfEdit.js';
 import ButtonOfDelete from '../Atoms/ButtonOfDelete.js';
 
