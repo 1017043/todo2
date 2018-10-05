@@ -16,13 +16,20 @@ const CardEnterTextAndData = (props) =>{
           <EnterDate
             changeDate={props.changeDate}
             changeTime={props.changeTime}
-            first_date = {props.first_state.deadline} />
+            first_date = {props.first_state.deadline}
+            add_state_date = {props.add_state.date} />
           <OutlineButton
             ClickOutlineButton={
               ()=>{
                 console.log(props.add_state.textarea);
                 if(props.add_state.textarea===""){
                   window.alert("テキストを入力してください");
+                }
+                else if(props.add_state.date===""){
+                  window.alert("日付を入力してください");
+                }
+                else if(props.add_state.time===""){
+                  window.alert("時間を入力してください");
                 }
                 else{
                   props.ClickOutlineButton()

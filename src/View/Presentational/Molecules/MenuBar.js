@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../Style/index.css';
 
-import OutlineButton from '../Atoms/OutlineButton.js';
 import ButtonOfGear from '../Atoms/ButtonOfGear.js';
 
 import Title from '../Atoms/Title.js';
