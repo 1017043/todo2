@@ -21,7 +21,8 @@ const TodoCard = (props) =>{
     return(
       <div className="TodoCard">
         <CheckTodo ClickCheck={props.ClickCheck} check={props.todo_value.check_do}/>
-        <TwoLowText todo_value={props.todo_value}/>
+        <TwoLowText todo_value={props.todo_value} />
+        <ButtonOfEdit ClickButtonOfEdit={props.ClickOutlineButton}/>
         <ButtonOfDelete ClickButtonOfDelete={props.ClickButtonOfDelete}/>
       </div>
     )

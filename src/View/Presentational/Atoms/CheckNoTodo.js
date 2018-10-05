@@ -5,14 +5,14 @@ const CheckTodo = (props) =>{
   if(props.check===false){
     return (
       <div className="CheckNoTodo">
-        <i className="far fa-circle fa-2x" onClick={props.ClickCheck}></i>
+        <i className="far fa-square fa-2x" onClick={props.ClickCheck}></i>
       </div>
     )
   }
   else{
     return (
       <div className="CheckNoTodo">
-        <i className="far fa-check-circle fa-2x" onClick={props.ClickCheck}></i>
+        <i className="far fa-check-square fa-2x" onClick={props.ClickCheck}></i>
       </div>
     )
   }
