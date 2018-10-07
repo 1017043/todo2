@@ -7,7 +7,7 @@ class AppMenuBar extends Component {
   render() {
     return (
       <div className="AppMenuBar">
-        <MeunBar ClickButtonOfGear={this.props.ClickButtonOfGear}/>
+        <MeunBar ClickButtonOfGear={this.props.ClickButtonOfGear} />
       </div>
     );
   }
