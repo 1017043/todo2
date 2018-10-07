@@ -17,7 +17,8 @@ const CardEnterTextAndData = (props) =>{
             changeDate={props.changeDate}
             changeTime={props.changeTime}
             first_date = {props.first_state.deadline}
-            add_state_date = {props.add_state.date} />
+            add_state_date = {props.add_state.date}
+            add_state_time = {props.add_state.time} />
           <OutlineButton
             ClickOutlineButton={
               ()=>{

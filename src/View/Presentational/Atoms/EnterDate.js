@@ -3,7 +3,7 @@ import moment from 'moment'
 import '../../Style/index.css';
 
 const EnterDate= (props) =>{
-  if(props.add_state_date===""){
+  if(props.add_state_date===""||props.add_state_time===""){
     return(
       <div className="EnterDate">
         <input
