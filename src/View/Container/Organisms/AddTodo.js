@@ -39,7 +39,12 @@ class AddTodo extends Component {
           changeText={e => this.changeValue(e)}
           changeDate={e => this.changeValue(e)}
           changeTime={e => this.changeValue(e)}
-          ClickOutlineButton={() => this.props.ClickOutlineButton(Object.assign({},this.state))}
+          ClickOutlineButton={() => {
+            this.props.ClickOutlineButton(Object.assign({},this.state));
+            this.setState({
+              textarea:"",
+            });
+          }}
           first_state={this.props.first_state}
           add_state={this.state}/>
       </div>

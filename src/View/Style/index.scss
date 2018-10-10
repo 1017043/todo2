@@ -47,7 +47,7 @@ textarea {
 
 .EnterText{
   width: 30vw;
-  height: 15vh;
+  height: 10vw;
 }
 
 .EnterDate{
@@ -79,7 +79,13 @@ textarea {
   top: 35vh;
   left: 35vw;
   width: 30vw;
-  height: 20vh;
+  @media screen and (max-width : 768px){
+    left: 15vw;
+    width: 70vw;
+    .EnterText{
+      width: 69vw;
+    }
+  }
   background: white;
   border-radius: 2px;
   box-shadow: 0px 2px 3px gray;
@@ -87,6 +93,7 @@ textarea {
   &__DateAndButton{
     display: flex;
     justify-content: center;
+    align-items: center;
     .EnterDate{}
     .OutlineButton{}
   }
@@ -146,9 +153,9 @@ textarea {
   align-items: center;
   width: 70vw;
   .TodoCard{
-    margin-top: 3vw;
+    margin-top: 4vh;
     &:first-child{
-      margin-top: 10vw;
+      margin-top: 10vh;
     }
   }
 }

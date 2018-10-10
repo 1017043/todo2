@@ -7,6 +7,7 @@ const initialState = {
   ],
   set_state: {
     order: "order_id",
+    display: "display_y",
   }
 };
 

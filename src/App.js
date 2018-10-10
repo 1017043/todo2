@@ -11,7 +11,9 @@ import TopPage from './View/Container/Templates/TopPage.js';
 class App extends Component {
   sortTodo(todo_list){
     const order = this.props.set_state.order
+    const display = this.props.set_state.display
     let cp_todo_list = todo_list.slice();
+
     switch (order){
       case "order_id":
         cp_todo_list.sort((a,b)=>a.id - b.id);
@@ -25,7 +27,15 @@ class App extends Component {
         break;
       default:
         console.log(order);
-        console.log("aaaaaaaaaaaa");
+    }
+    switch (display){
+      case "display_y":
+        break;
+      case "display_n":
+        cp_todo_list = cp_todo_list.filter(value => value.check_do === false);
+        break;
+      default:
+        console.log(display);
     }
     return cp_todo_list
   }

@@ -9,6 +9,7 @@ class SetTodo extends Component {
     super(props);
     this.state = {
       order: "order_id",
+      display: "display_y"
     };
   }
   changeValue(e){
