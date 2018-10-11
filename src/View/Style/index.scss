@@ -54,6 +54,15 @@ textarea {
   display: flex;
 }
 
+.PopUpWarning{
+  position: absolute;
+  left: 0;
+  top: -5vh;
+  i{
+    color: red;
+  }
+}
+
 
 //Molecules
 .MenuBar{
@@ -97,6 +106,7 @@ textarea {
     .EnterDate{}
     .OutlineButton{}
   }
+  .PopUpWarning{}
 }
 
 .CardToSet{

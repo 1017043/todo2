@@ -3,13 +3,12 @@ import Moment from 'react-moment';
 import '../../Style/index.css';
 
 const TwoLowText = (props) =>{
+  console.log(props.dif_time);
   return (
     <div className="TwoLowText">
       <div className="text">{props.todo_value.text}</div>
       <div>
-        <Moment format="YYYY/MM/DD HH:mm">
-          {props.todo_value.deadline}
-        </Moment>
+        {`残り${Math.trunc((props.dif_time)/86400000)}日と${Math.trunc((props.dif_time)%86400000/3600000)}時間${Math.trunc((props.dif_time)%86400000%3600000/60000)}分${Math.trunc((props.dif_time)%86400000%3600000%60000/1000)}秒`}
       </div>
     </div>
   )

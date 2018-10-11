@@ -10,18 +10,22 @@ class TodoCard extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      time: new Date()
+      time: new Date(),
+      dif_time: this.props.todo_value.deadline-new Date()
     };
   }
   componentDidMount(){
-    setInterval(() => this.setState({time: new Date()}), 1000);
+    setInterval(() => this.setState({
+      time: new Date(),
+      dif_time: this.props.todo_value.deadline-new Date()
+    }), 1000);
   }
   render(){
     if(this.props.todo_value.deadline.getTime() > this.state.time.getTime()){
       return (
         <div className="TodoCard">
           <CheckTodo ClickCheck={this.props.ClickCheck} check={this.props.todo_value.check_do}/>
-          <TwoLowText todo_value={this.props.todo_value}/>
+          <TwoLowText todo_value={this.props.todo_value} dif_time = {this.state.dif_time}/>
           <ButtonOfEdit ClickButtonOfEdit={this.props.ClickOutlineButton}/>
           <ButtonOfDelete ClickButtonOfDelete={this.props.ClickButtonOfDelete}/>
         </div>
@@ -31,7 +35,7 @@ class TodoCard extends Component{
       return (
         <div className="TodoCard isactive_red">
           <CheckTodo ClickCheck={this.props.ClickCheck} check={this.props.todo_value.check_do}/>
-          <TwoLowText todo_value={this.props.todo_value}/>
+          <TwoLowText todo_value={this.props.todo_value} dif_time = {this.state.dif_time}/>
           <ButtonOfEdit ClickButtonOfEdit={this.props.ClickOutlineButton}/>
           <ButtonOfDelete ClickButtonOfDelete={this.props.ClickButtonOfDelete}/>
         </div>

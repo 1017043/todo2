@@ -42,6 +42,13 @@ textarea {
 .EnterDate {
   display: flex; }
 
+.PopUpWarning {
+  position: absolute;
+  left: 0;
+  top: -5vh; }
+  .PopUpWarning i {
+    color: red; }
+
 .MenuBar {
   position: fixed;
   top: 0;
