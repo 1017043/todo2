@@ -1,13 +1,20 @@
 import React from 'react';
 import '../../Style/index.css';
 
+import { withStyles } from '@material-ui/core/styles';
+import {MaterialStyle} from './MaterialStyle.js';
+
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
 
 const Fab = (props) =>{
+  const { classes } = props;
   return (
-    <div className="Fab" onClick={props.onClick}>
-      <i className="fas fa-plus fa-2x"></i>
-    </div>
+    <Button variant="fab" color="primary" aria-label="Add" className={classes.Fab} onClick={props.onClick}>
+      <AddIcon fontSize = 'large'/>
+    </Button>
   )
 }
 
-export default Fab;
+
+export default withStyles(MaterialStyle)(Fab)
