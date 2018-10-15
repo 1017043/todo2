@@ -1,3 +1,4 @@
+/*
 import React, { Component } from 'react';
 import '../../Style/index.css';
 
@@ -45,3 +46,4 @@ class TodoCard extends Component{
 }
 
 export default TodoCard;
+*/
