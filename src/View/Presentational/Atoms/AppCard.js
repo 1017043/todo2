@@ -18,13 +18,12 @@ const AppCard= (props) =>{
   return (
     <Card className={classes.Card}>
       <CardContent className={classes.Card__Content}>
-        <Typography variant="h6">
-          {props.todo_text}
-          <Expansion />
-        </Typography>
-        <Typography variant=""　color="textSecondary">
-          {props.todo_date}
-        </Typography>
+          <Expansion
+            todo_text={props.todo_text}
+            todo_date={props.todo_date}　
+            ClickOutlineButton={props.ClickOutlineButton}
+            ClickButtonOfDelete={props.ClickButtonOfDelete}
+          />
       </CardContent>
       <CardActions className={classes.Card__Action}>
         <CheckTodo check={props.check} ClickCheck={props.ClickCheck}/>

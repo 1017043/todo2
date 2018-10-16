@@ -129,5 +129,8 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center; }
+.test{
+  width: calc(100% - 48px)
+}
 
 /*# sourceMappingURL=index.css.map */

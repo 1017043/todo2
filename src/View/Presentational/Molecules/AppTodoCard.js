@@ -33,7 +33,10 @@ class TodoCard extends Component{
         check = {this.props.todo_value.check_do}
         todo_text={this.props.todo_value.text}
         todo_date={`残り${Math.trunc((this.state.dif_time)/86400000)}日と${Math.trunc((this.state.dif_time)%86400000/3600000)}時間${Math.trunc((this.state.dif_time)%86400000%3600000/60000)}分${Math.trunc((this.state.dif_time)%86400000%3600000%60000/1000)}秒`}
-        ClickCheck={this.props.ClickCheck}/>
+        ClickCheck={this.props.ClickCheck}ClickOutlineButton
+        ClickOutlineButton={this.props.ClickOutlineButton}
+        ClickButtonOfDelete={this.props.ClickButtonOfDelete}
+      />
     )
   }
 }
