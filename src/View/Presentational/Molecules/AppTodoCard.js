@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import '../../Style/index.css';
 
-import CheckTodo from '../Atoms/CheckNoTodo.js';
 import AppCard from '../Atoms/AppCard.js';
 
 /*
@@ -33,9 +32,10 @@ class TodoCard extends Component{
         check = {this.props.todo_value.check_do}
         todo_text={this.props.todo_value.text}
         todo_date={`残り${Math.trunc((this.state.dif_time)/86400000)}日と${Math.trunc((this.state.dif_time)%86400000/3600000)}時間${Math.trunc((this.state.dif_time)%86400000%3600000/60000)}分${Math.trunc((this.state.dif_time)%86400000%3600000%60000/1000)}秒`}
-        ClickCheck={this.props.ClickCheck}ClickOutlineButton
+        ClickCheck={this.props.ClickCheck}
         ClickOutlineButton={this.props.ClickOutlineButton}
         ClickButtonOfDelete={this.props.ClickButtonOfDelete}
+        check_time = {this.state.dif_time}
       />
     )
   }

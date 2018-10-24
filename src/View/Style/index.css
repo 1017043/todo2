@@ -28,7 +28,7 @@ textarea {
   cursor: default; }
 
 .BackCover {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -63,7 +63,7 @@ textarea {
     margin-right: 2vw; }
 
 .CardEnterTextAndData {
-  position: absolute;
+  position: fixed;
   top: 35vh;
   left: 35vw;
   width: 30vw;
@@ -78,7 +78,6 @@ textarea {
         width: 69vw; } }
   .CardEnterTextAndData__DateAndButton {
     display: flex;
-    justify-content: center;
     align-items: center; }
 
 .CardToSet {
@@ -89,10 +88,14 @@ textarea {
   flex-direction: column;
   align-items: center;
   width: 30vw;
-  height: 12vw;
   background: white;
   border-radius: 4px;
-  box-shadow: 0px 2px 3px gray; }
+  box-shadow: 0px 2px 3px gray;
+  padding: 2vw; }
+  @media screen and (max-width: 768px) {
+    .CardToSet {
+      left: 15vw;
+      width: 70vw; } }
 
 .TodoCard {
   display: flex;
@@ -129,8 +132,9 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center; }
-.test{
-  width: calc(100% - 48px)
-}
+
+.test {
+  width: calc(100% - 56px);
+  word-wrap: break-word; }
 
 /*# sourceMappingURL=index.css.map */

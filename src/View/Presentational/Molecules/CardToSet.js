@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../Style/index.css';
 
 import SelectBox from '../Atoms/SelectBox.js';
+import AppSelect from '../Atoms/AppSelect.js';
 
 class CardToSet extends Component{
   constructor(props) {
@@ -21,13 +22,12 @@ class CardToSet extends Component{
   }
   makeSelect(){
     let list  = []
-    console.log(this.state.order);
     for(let key in this.state){
       let choices = [];
       for(let i = 0; i < this.state[key].value.length; i++){
         choices.push(<option value={this.state[key].value[i]}>{this.state[key].label[i]}</option>);
       }
-      list.push(<SelectBox name = {key} cont={this.state[key].title} choices={choices} changeSelect={this.props.changeSelect}/>);
+      list.push(<AppSelect set_state={this.props.set_state} name = {key} cont={this.state[key].title} choices={choices} changeSelect={this.props.changeSelect}/>);
     }
     return list;
   }

@@ -19,14 +19,12 @@ class App extends Component {
         cp_todo_list.sort((a,b)=>a.id - b.id);
         break;
       case "order_date":
-        console.log("test");
         cp_todo_list.sort((a,b)=>a.deadline - b.deadline);
         break;
       case "order_Date":
         cp_todo_list.sort((a,b)=>-(a.deadline - b.deadline));
         break;
       default:
-        console.log(order);
     }
     switch (display){
       case "display_y":
@@ -44,6 +42,7 @@ class App extends Component {
       <TopPage
         ClickOutlineButton={this.props.actionAddTodo}
         todo_value_list={this.sortTodo(this.props.todo_value_list)}
+        set_state={Object.assign({},this.props.set_state)}
         ClickCheck={this.props.checkTodo}
         ClickOutlineButtonOfTodo={this.props.changeTaskMd}
         ClickButtonOfDelete={this.props.deleteTask}
@@ -52,7 +51,6 @@ class App extends Component {
   }
 }
 function mapStateToProps(state) {
-  console.log(state)
   return{
     page: state.ReducerChangeTaskAdd.page,
     todo_value_list: state.ReducerToDoList.todo_value_list,

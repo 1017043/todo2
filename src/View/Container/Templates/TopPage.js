@@ -51,7 +51,8 @@ class TopPage extends Component {
               deadline: new Date()
              }}
             ClickBackCover={()=>this.ChangeTask(0,0)}
-            ClickOutlineButton={this.props.ClickOutlineButton} />
+            ClickOutlineButton={this.props.ClickOutlineButton}
+            ClickCancel = {()=>this.ChangeTask(0,0)} />
         </div>
       );
     }
@@ -70,7 +71,8 @@ class TopPage extends Component {
                 this.props.ClickOutlineButtonOfTodo(state, this.state.target);
                 this.ChangeTask(0,0);
               }
-            }/>
+            }
+            ClickCancel = {()=>this.ChangeTask(0,0)} />
         </div>
       );
     }
@@ -80,6 +82,7 @@ class TopPage extends Component {
           <AppMenuBar/>
           <TodoList todo_value_list={this.props.todo_value_list}/>
           <SetTodo
+          set_state = {this.props.set_state}
           ClickBackCover={()=>this.ChangeTask(0,0)}
           changeSetUp={this.props.changeSetUp} />
         </div>
